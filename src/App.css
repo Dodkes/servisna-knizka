@@ -8,9 +8,9 @@
 }
 
 body {
+  color: white;
   background-color:steelblue;
   text-shadow: 2px 2px  2px black;
-
 }
 
 input {

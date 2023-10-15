@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import './App.css';
-import Output from './Output';
-
+import { useState } from 'react'
+import './App.css'
+import Output from './Output'
+import ConsumptionInput from './ConsumptionInput/ConsumptionInput'
+import Header from './Header/Header'
 
 function App() {
   const kilometers = 148800
@@ -36,12 +37,8 @@ function update () {
 
   return (
     <>
-    <div className="App">
-      <h1>Last record: {kilometers} KM</h1>
-        Current KM: <input id='kmInput' type='number' onChange={() => update()}></input>
-        Paid for fuel: <input id='moneyInput' type='number' onChange={() => update()}></input>
-        Refueled liters: <input id='fuelInput' type='number' onChange={() => update()}></input>
-    </div>
+    <Header kilometers={kilometers}/>
+    <ConsumptionInput kilometers={kilometers} update={() => update()}/>
     <Output car={car}/>
     </>
   )
