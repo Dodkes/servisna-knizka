@@ -1,0 +1,18 @@
+#output {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px  2px black;
+
+}
+
+li {
+    list-style-type: none;
+    color: white;
+    margin: 5px;
+}
+
+#data {
+    color: red;
+}
