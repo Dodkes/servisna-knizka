@@ -1,4 +1,5 @@
 import React from 'react'
+import './consumptionInput.css'
 
 export default function ConsumptionInput(props) {
   return (

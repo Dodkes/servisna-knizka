@@ -1,7 +1,9 @@
 .App {
   border: 1px solid black;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
   padding: 20px;
   border-radius: 10px;
   color: white;
@@ -9,8 +11,8 @@
 
 body {
   color: white;
-  background-color:steelblue;
   text-shadow: 2px 2px  2px black;
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
 }
 
 input {
