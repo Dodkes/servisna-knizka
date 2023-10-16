@@ -6,7 +6,7 @@ export default function Header(props) {
     <div id='header'>
     <h1>Your car: VW Tiguan</h1>
     <div id='car-data'>
-        <h3>KM: {props.kilometers}Hi</h3>
+        <h3>KM: {props.kilometers}</h3>
     </div>
     </div>
   )

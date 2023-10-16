@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import Output from './Output'
 import ConsumptionInput from './ConsumptionInput/ConsumptionInput'
 import Header from './Header/Header'
 
@@ -25,12 +24,12 @@ function update () {
   setCar(
     {
       drivenKM: drivenKM,
-      consumption100: ((refilledFuel/drivenKM) * 100).toFixed(3),
-      consumptionMoney: (paidForFuel / refilledFuel).toFixed(2) * ((refilledFuel/drivenKM) * 100).toFixed(3),
-      consumption10: ((refilledFuel/drivenKM) * 10).toFixed(3),
-      consumption10Money: (paidForFuel / refilledFuel).toFixed(2) * ((refilledFuel/drivenKM) * 10).toFixed(3),
-      literToKM: (drivenKM / refilledFuel).toFixed(3),
-      priceForLiter: (paidForFuel / refilledFuel).toFixed(3)
+      consumption100: ((refilledFuel/drivenKM) * 100).toFixed(2),
+      consumptionMoney: parseFloat((paidForFuel / refilledFuel).toFixed(2) * ((refilledFuel/drivenKM) * 100)).toFixed(2),
+      consumption10: ((refilledFuel/drivenKM) * 10).toFixed(2),
+      consumption10Money: parseFloat((paidForFuel / refilledFuel).toFixed(2) * ((refilledFuel/drivenKM) * 10)).toFixed(2),
+      literToKM: parseFloat((drivenKM / refilledFuel)).toFixed(2),
+      priceForLiter: (paidForFuel / refilledFuel).toFixed(2)
     }
   )
 }
@@ -38,8 +37,7 @@ function update () {
   return (
     <>
     <Header kilometers={kilometers}/>
-    <ConsumptionInput kilometers={kilometers} update={() => update()}/>
-    <Output car={car}/>
+    <ConsumptionInput car={car} kilometers={kilometers} update={() => update()}/>
     </>
   )
 }
